@@ -1,0 +1,25 @@
+.agents/
+node_modules/
+.env
+.agents.md
+# Logs de errores
+pnpm-debug.log*
+pnpm-debug.log*
+pnpm-error.log*
+
+# Archivos del sistema y editores
+.DS_Store
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.env
+agente.md
