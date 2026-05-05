@@ -5,9 +5,10 @@ import TextField from './ui/TextField';
 
 interface LoginViewProps {
   onLogin: () => void;
+  onRegisterClick: () => void;
 }
 
-const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
+const LoginView: React.FC<LoginViewProps> = ({ onLogin, onRegisterClick }) => {
   return (
     <div className="min-h-screen bg-green-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-[32px] shadow-2xl overflow-hidden w-full max-w-md border border-green-100">
@@ -48,8 +49,18 @@ const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
             </Button>
           </div>
 
+          <div className="mt-6 text-center">
+            <button 
+              onClick={onRegisterClick}
+              className="text-sm text-green-600 font-semibold hover:underline"
+            >
+              ¿No tienes cuenta? Regístrate aquí
+            </button>
+          </div>
+
           {/* Footer Info */}
           <div className="mt-8 flex items-start gap-2 text-[10px] text-gray-400 leading-relaxed italic">
+
             <div className="bg-green-50 p-1 rounded-full text-green-500 mt-0.5">
               <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M2.166 4.9L9.03 9.069a2.25 2.25 0 002.44 0L18.334 4.9A.75.75 0 0017.5 3.5H3a.75.75 0 00-.834 1.4z" />
