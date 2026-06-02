@@ -2,7 +2,7 @@ import React from 'react';
 
 interface IconButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   icon: React.ReactNode;
-  variant?: 'ghost' | 'glass' | 'primary' | 'secondary';
+  variant?: 'ghost' | 'glass' | 'primary' | 'secondary' | 'danger';
   size?: 'sm' | 'md' | 'lg';
 }
 
@@ -20,6 +20,7 @@ const IconButton: React.FC<IconButtonProps> = ({
     glass: 'bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm',
     primary: 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg',
     secondary: 'bg-green-600 hover:bg-green-700 text-white shadow-lg',
+    danger: 'bg-red-600 hover:bg-red-700 text-white shadow-lg',
   };
 
   const sizes = {
