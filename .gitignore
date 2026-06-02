@@ -16,6 +16,7 @@ pnpm-error.log*
 *.njsproj
 *.sln
 *.sw?
+.backend/.env
 
 npm-debug.log*
 yarn-debug.log*
@@ -23,3 +24,9 @@ yarn-error.log*
 pnpm-debug.log*
 .env
 agente.md
+ARCHITECTURE.md
+CLAUDE.md
+backend/*.db
+backend/*.db-journal
+backend/*.db-wal
+backend/*.db-shm

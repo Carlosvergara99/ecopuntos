@@ -1,0 +1,37 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  .gitignore — backend
+#  ¿Por qué un .gitignore propio para el backend?
+#  ──────────────────────────────────────────────
+#  Aunque el repo ya tiene un .gitignore en la raíz (orientado al frontend),
+#  el backend tiene artefactos que no aplican al frontend (la base SQLite,
+#  el .env del servidor, logs de Node) y conviene declararlos cerca del
+#  código que los genera. Esto deja el módulo "auto-contenido": cualquiera
+#  que mire SOLO esta carpeta entiende qué se versiona y qué no.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Dependencias instaladas localmente. Se reconstruyen con `npm install`.
+node_modules/
+
+# Variables de entorno. NUNCA se versionan: contienen secretos (JWT_SECRET,
+# claves de APIs, etc.). Solo se versiona `.env.example` como plantilla.
+.env
+.env.local
+
+# Base de datos SQLite local. Es estado mutable de desarrollo, no código.
+# Si se versiona, cada estudiante pisa los datos del otro al hacer pull.
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Logs y artefactos varios.
+npm-debug.log*
+*.log
+coverage/
+.nyc_output/
+
+# Archivos del editor / SO que no aportan al proyecto.
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
